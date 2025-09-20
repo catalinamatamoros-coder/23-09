@@ -11,6 +11,11 @@ El objetivo de esta sección es resolver problemas prácticos utilizando los fun
 3. **Secuencia de Fibonacci:** Genera los primeros N números de la secuencia de Fibonacci, donde N es un número proporcionado por el usuario.
 4. **Adivina el Número:** El programa genera un número aleatorio entre 1 y 100. El usuario debe adivinarlo y el programa le dará pistas ("más alto" o "más bajo").
 5. **Conversor de Temperatura:** Crea dos funciones, una para convertir de grados Celsius a Fahrenheit y otra para hacer la conversión inversa.
+def celsius_a_fahrenheit(c):
+    return c * 9/5 + 32
+def fahrenheit_a_celsius(f):
+    return (f - 32) * 5/9
+
 
 ### Grupo 2: Manipulación de Cadenas y Listas (Ejercicios 6-10)
 
@@ -25,9 +30,11 @@ def es_palindromo(texto):
     else:
         return False
 
+
 8. **Eliminar Duplicados de una Lista:** Dada una lista, crea una nueva lista que contenga solo los elementos únicos de la original, sin repetir ninguno.
 9. **Buscador de Elementos Comunes:** Escribe una función que reciba dos listas y devuelva una nueva lista con los elementos que ambas tienen en común.
 10. **Ordenamiento de Lista (Burbuja):** Implementa el algoritmo de ordenamiento de burbuja para ordenar una lista de números de menor a mayor sin usar la función sort().
+
 >>> def burbuja(lista):
 ...  n = len(lista)
 ...  for i in range(n):
@@ -35,7 +42,6 @@ def es_palindromo(texto):
 ...    if lista[j] > lista[j + 1]:
 ...     lista[j], lista[j + 1] = lista[j + 1], lista[j]
 ...  return lista
-
 
 ### Grupo 3: Diccionarios y Estructuras de Datos (Ejercicios 11-15)
 
@@ -68,38 +74,3 @@ Lista para almacenar las tareas en memoria. Puedes inicializarla con algunas tar
 
 `tareas = ["Aprender Python", "Crear un entregable", "Practicar Flask"]`
 
-## Parte 3: 10 Ejercicios de Introducción a Ciencia de Datos con Google Colab
-
-Esta sección busca familiarizar al estudiante con el entorno de Google Colab y las librerías fundamentales para el análisis de datos: NumPy, Pandas y Matplotlib.
-
-1. **Hola, Google Colab:**
-- Crea un nuevo notebook en Google Colab.
-- Añade una celda de texto con el título "Mi Primer Notebook de Ciencia de Datos".
-- En una celda de código, importa la librería NumPy y muestra su versión.
-2. **Creación y Cálculo con NumPy:**
-- Crea un array de NumPy que contenga 15 números enteros aleatorios entre 1 y 50.
-- Calcula e imprime la media, la mediana y la desviación estándar de los datos en el array.
-3. **Manipulación de Arrays con NumPy:**
-- Crea una matriz (array 2D) de 4x4 con números del 1 al 16.
-- Selecciona y muestra únicamente los elementos de las dos últimas filas y las dos primeras columnas.
-4. **Creación de un DataFrame con Pandas:**
-- Crea un DataFrame de Pandas a partir del siguiente diccionario:
-
-- `datos = {
-    'Nombre': ['Ana', 'Luis', 'Marta', 'Juan'],
-    'Edad': [28, 34, 45, 23],
-    'Ciudad': ['Madrid', 'Bogotá', 'Lima', 'México DF']
-}`
-- Muestra el DataFrame completo.
-5. **Carga de Datos desde un Archivo CSV:**
-- Busca en internet un dataset simple en formato CSV (por ejemplo, el dataset "Iris" o uno sobre propinas "tips").
-- Sube el archivo CSV a tu entorno de Google Colab y cárgalo en un DataFrame de Pandas.
-6. **Exploración Inicial de un DataFrame:**
-
-Usando el DataFrame cargado en el ejercicio anterior:
-- Muestra las primeras 10 filas (.head(10)).
-- Obtén información general del DataFrame (.info()).
-- Genera un resumen estadístico de las columnas numéricas (.describe()).
-7. **Selección y Filtrado de Datos en Pandas:**
-- Del DataFrame cargado, selecciona y muestra solo la columna "Edad" (o una columna numérica de tu dataset).
-- Filtra y muestra todas las filas donde el valor de esa columna sea mayor a 30.
